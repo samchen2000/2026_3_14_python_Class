@@ -5,6 +5,10 @@
 
 https://meet.google.com/nnj-tzex-mwj
 
+## 上課 講義 :
+
+https://github.com/roberthsu2003/LLMs_Raspberry
+
 WiFi
 SSID：A590301
 PW：A590301AA
@@ -29,4 +33,19 @@ password : raspberry
 9. 選擇"5 Localisation Options" -> "L2 TimeZone" 選 "Asia" -> "Taipei"  
 10. 選擇 "8 Update" 之後 "Finish"  
 11. 也可以先不用設定 8~10 項 , VNC enable 打開 可以使用 vnc Viewer, 或是接 microHDMI 連接螢幕設定. 在control center 裡面設定.
-12. 
+12. 使用電腦 wifi 作為熱點 :
+    上課用 wifi 熱點名稱 : F602-08-wifi
+                密碼    : raspberry
+13. 安裝 kiro
+📌 Vibe 模式開發
+快速體驗 Vibe Coding 完成開發程式。
+📌 Spec 模式：規格驅動開發（Spec-Driven）:
+只要輸入簡單開發提示就可變成詳細的需求與架構，產生完整規格文件。
+🤖 事件驅動代理（Agent Hooks）
+可根據事件（如儲存檔案）自動觸發任務，像是產生文檔、測試、優化程式碼等。
+🧭 代理指南（Agent Steering）
+自訂每個專案的開發規範、語法命名等程式風格要求。
+🧩 VS Code 基底，熟悉又升級的操作體驗
+匯入你的設定檔與擴充套件，無需捨棄熟悉的開發環境。
+
+14. 在 kiro 安裝延伸程式 " open remunt - SSH " " 繁體中文套件 "
