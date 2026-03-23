@@ -7,7 +7,7 @@ https://www.youtube.com/watch?v=xCwNvjKsdBs
 https://www.youtube.com/watch?v=QAB9R0uFqjM
 
 
-## 上設需先預安裝軟體  :
+## 上課需先預安裝軟體  :
 1. 安裝 vscode , git , putty , vnc viewer , kiro
 2. 進入 Github 網站登入
 3. vscode or kiro 使用 terminal 輸入 : git config user.name " my name"  
