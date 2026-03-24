@@ -17,9 +17,37 @@ https://www.youtube.com/watch?v=_JEWTw_UG8M
    "google-genai>=1.68.0",
    "python-dotenv>=1.2.2",
 ```
-需要安裝 :  pip install google-genai
-           pip inatall python-dotenv
-         
+需要安裝 :  
+```
+pip install google-genai
+pip inatall python-dotenv
+```           
+---
+## 5. 安裝 uv (現代化的 Python 套件管理與虛擬環境工具)         
+### - Linux 安裝  
+```
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+### - 在已有的專案
+```
+uv init --python 3.10
+uv venv
+uv sync
+```
+### - 建立新專案
+```
+uv init my-project
+cd my-project
+uv sync
+```
+### - 建立虛擬環境
+```
+uv venv
+```
+### - 啟用虛擬環境
+```
+source .venv/bin/activate  # macOS/Linux
+```
 
 
 ## 回家作業
