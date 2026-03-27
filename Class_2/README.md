@@ -48,7 +48,10 @@ uv venv
 ```
 source .venv/bin/activate  # macOS/Linux
 ```
-
+## 設定 API 金鑰
+- 將 API 金鑰設為環境變數 `GEMINI_API_KEY` 在本地增加 `.env`檔案 將 GEMINI_API_KEY=xxxxxxxxxx 填入.
+- 增加 `.gitignore`檔案 將.venv/ , .env 寫入, 避免將 檔案上傳到 github.
+- 提供使用
 
 ## 回家作業
 1. 在 raspberry pi 安裝 ollima 

@@ -16,22 +16,31 @@ model = genai.GenerativeModel('models/gemini-2.5-flash')
 
 def send_question():
     question = entry.get()
+    style = style_var.get()
     if not question.strip():
         messagebox.showwarning("警告", "請輸入問題。")
         return
 
     try:
-        response = model.generate_content(question)
-        text_area.insert(tk.END, f"您: {question}\n")
-        text_area.insert(tk.END, f"Gemini: {response.text}\n\n")
+        prompt = f"請用{style}風格回答以下問題，並用繁體中文：{question}"
+        response = model.generate_content(prompt)
+        text_area.insert(tk.END, f"Sam 問: {question}\n")
+        text_area.insert(tk.END, f"Gemini 小幫手 ({style}): {response.text}\n\n")
         entry.delete(0, tk.END)
     except Exception as e:
         messagebox.showerror("錯誤", f"發生錯誤: {str(e)}")
 
 # 創建主視窗
 root = tk.Tk()
-root.title("Gemini 問答視窗")
+root.title("Gemini 小幫手")
 root.geometry("500x400")
+
+# 風格選擇
+style_var = tk.StringVar(value="友好")
+style_label = tk.Label(root, text="選擇AI風格:")
+style_label.pack(pady=5)
+style_menu = tk.OptionMenu(root, style_var, "友好", "專業", "幽默", "簡潔", "詳細")
+style_menu.pack(pady=5)
 
 # 輸入框
 entry = tk.Entry(root, width=50)
@@ -42,7 +51,7 @@ send_button = tk.Button(root, text="發送", command=send_question)
 send_button.pack()
 
 # 文本區域顯示對話
-text_area = tk.Text(root, height=15, width=60)
+text_area = tk.Text(root, height=15, width=60, wrap="word", font=("微軟正黑體", 12))
 text_area.pack(pady=10)
 
 # 運行 GUI
