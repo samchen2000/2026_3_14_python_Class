@@ -5,7 +5,7 @@ https://www.youtube.com/watch?v=0Rz4UhiGn2k
 
 ### 2026_03_28_下午
 
-## 3/28 上課筆記:
+## 3/28 上課筆記: (上午)
 1. 安裝 Warp (Terminal)
 2. 安裝 ollama , 安裝 LLM , 也可以安裝 Cloud 版本,但需要依照安裝後的LLM 提供的網址進入註冊.
 3. 修改 raspberry /etc/default/locale 增加中文字形,避免輸出文字成為亂碼.
@@ -25,6 +25,20 @@ https://github.com/roberthsu2003/LLMs_Raspberry/blob/main/Docker/raspberry%E5%AE
 ```
 https://github.com/roberthsu2003/LLMs_Raspberry/blob/main/OpenWebUI/OpenWebUI%E7%B0%A1%E6%98%93%E5%AE%89%E8%A3%9D%E6%B5%81%E7%A8%8B%E8%AA%AA%E6%98%8E.md#section-4
 ```
+
+## 3/28 上課筆記(下午)
+1. 
+```
+# 檢查 Docker 系統資訊
+docker system info
+
+# 檢查 Docker 服務狀態
+sudo systemctl status docker
+
+# 檢查 Docker 是否正在執行
+sudo systemctl is-active docker
+```
+2. open-webui 的建立
 
 ### Gemini: Python 針對 camera 的「指令」通常指的是使用 Python 程式庫來與攝影機互動的函數（functions）和方法（methods）。這些指令會根據你使用的攝影機類型和目的（例如，網路攝影機、IP 攝影機、DSLR、樹莓派攝影機、或用於即時串流、拍照）而有所不同。
 
