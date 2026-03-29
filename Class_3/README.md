@@ -4,6 +4,7 @@
 https://www.youtube.com/watch?v=0Rz4UhiGn2k
 
 ### 2026_03_28_下午
+https://www.youtube.com/watch?v=sSSUSdWo_30
 
 ## 3/28 上課筆記: (上午)
 1. 安裝 Warp (Terminal)
