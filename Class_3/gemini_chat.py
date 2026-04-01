@@ -13,6 +13,7 @@ genai.configure(api_key=API_KEY)
 # gemini-pro 可能在當前 v1beta 版本無法使用，請改用可用模型名稱
 # 可透過 `genai.list_models()` 查詢來獲得最新名稱
 model = genai.GenerativeModel('models/gemini-2.5-flash')
+model_list = genai.list_models()
 
 def send_question():
     question = entry.get()
