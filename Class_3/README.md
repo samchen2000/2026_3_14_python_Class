@@ -20,6 +20,24 @@ LC_CTYPE=zh_TW.UTF-8
 ```
 https://github.com/roberthsu2003/LLMs_Raspberry/blob/main/Docker/raspberry%E5%AE%89%E8%A3%9Ddocker.md
 ```
+### 下載並執行 Docker 官方安裝腳本
+```
+# 下載安裝腳本
+curl -fsSL https://get.docker.com -o get-docker.sh
+
+# 執行安裝腳本
+sudo sh get-docker.sh
+```
+### 將使用者加入 docker 群組
+```
+# 將目前使用者加入 docker 群組
+sudo usermod -aG docker $USER
+
+# 立即讓群組設定生效（執行後，無需登出即可讓 $USER 擁有 docker 權限）
+newgrp docker
+```
+
+
 5. 安裝 OpenWebUI (是一個功能強大、介面友善的網頁UI，可以讓你與在本機（例如你的電腦或 Raspberry Pi）上運行的 Ollama 大型語言模型進行互動。)
 - 請參考
 安裝(適合raspberry)：連接到現有的 Ollama -> network:bridge
@@ -40,6 +58,10 @@ sudo systemctl status docker
 sudo systemctl is-active docker
 ```
 2. open-webui 的建立
+```
+
+```
+------------------------------------------------------------------------------------------
 
 ### Gemini: Python 針對 camera 的「指令」通常指的是使用 Python 程式庫來與攝影機互動的函數（functions）和方法（methods）。這些指令會根據你使用的攝影機類型和目的（例如，網路攝影機、IP 攝影機、DSLR、樹莓派攝影機、或用於即時串流、拍照）而有所不同。
 
