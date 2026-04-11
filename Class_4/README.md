@@ -27,3 +27,4 @@ ollama launch claude --model kimi-k2.5:cloud
 ```
 
 ## 4/11 上課筆記: (下午)
+
