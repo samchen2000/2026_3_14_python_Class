@@ -10,6 +10,13 @@ https://www.youtube.com/watch?v=qnoOqfhAfwU
 ## 4/18 上課筆記: (下午)
 1. 申請telegram 
 2. 申請後再telegram bot
+- 申請 Telegram Bot (機器人) 僅需透過官方的 @BotFather 帳號即可完成。步驟為：搜尋 @BotFather -> 發送 /newbot -> 設定顯示名稱 -> 設定以 bot 結尾的唯一使用者名稱 (Username) -> 取得 HTTP API Token。   
+| ##### **申請步驟教學** #####：  
+**1.** 找到 BotFather： 在 Telegram 搜尋列輸入 @BotFather，認明有藍色勾勾的官方帳號，點擊「Start」開始對話。  
+**2.** 建立新機器人： 輸入並傳送指令 /newbot。  
+**3.** 命名機器人 (Name)： 系統會要求輸入機器人顯示名稱，可使用任意語言（例如：MyTestBot）。  
+**4.** 設定使用者名稱 (Username)： 輸入唯一的機器人帳號，必須以 bot 結尾，且不能重複（例如：my_test_bot）。  
+**5.** 取得 Token： 成功建立後，BotFather 會發送「Congratulations!...」訊息，其中包含一組 API Token（一串黃色文字），這是機器人串接 API 的關鍵憑證，請務必妥善保管。  
 3. 在 open-webui 設定函式 action
 ```
 """
