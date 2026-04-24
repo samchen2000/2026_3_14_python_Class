@@ -53,3 +53,35 @@ docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-
 #### 3. Configure container: 根據命令的選項來設定。舉例來說： -d 表示在後台運行、-p 表示容器運行的 Port 設定，還有其他設定就請自己看文件吧！
 #### 4. Start container: 啟動容器，因為我們的 port 設為 3000:8080 ，前面的數字表示本機的 port，後面則是容器的 port
 - 開啟瀏覽器造訪 http://localhost:3000
+
+### 補充心得
+1. 因為open-webui 有更新版本,所以依照網上安裝方式更新
+- A. 停止並刪除當前容器  :  
+**這將停止正在運行的容器並刪除它，但不會刪除儲存在 Docker 磁碟區中的資料。 （如果您的容器名稱不同，請在整個更新過程中將 open-webui 替換為您的容器名稱。）.**
+```
+docker rm -f open-webui
+```
+- B. 拉取最新的 Docker 映像 ：  
+**這將更新 Docker 映像，但不會更新正在運行的容器或其資料。**
+``` 
+docker pull ghcr.io/open-webui/open-webui:main
+```
+- C. 使用更新的鏡像和附加的現有磁碟區重新啟動容器 ：  
+**如果您沒有刪除現有數據，這將使用更新的鏡像和現有數據啟動容器。如果您刪除了現有數據，這將使用更新的鏡像和新的空卷啟動容器。 對於 Nvidia GPU 支持，請在 docker run 命令中新增 --gpus all.**
+```
+docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:main
+```
+
+2. 自己依照步驟更新後就無法進入 open-webui ,
+ 重新關閉Docker stop open-webui ,
+ 再打開 Docker start open-webui 還是沒有辦法打開,所以重新執行
+ ```
+docker run -d \
+--network=host \
+-v open-webui:/app/backend/data \
+-e OLLAMA_BASE_URL=http://127.0.0.1:11434 \
+-e GEMINI_API_KEY=個人的API KEY \
+--name open-webui \
+--restart always \
+ghcr.io/open-webui/open-webui:main
+```
